@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --corPrimary: #F3541C;
+    --corFontPrimary: #57534E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    justify-items: center;
+}
+
+label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.6px;
+    width: 528px;
+    height: 20px;
+    color: var(--corFontPrimary);
+}
+
+input {
+    width: 528px;
+    height: 46px;
+    border: 1px solid var(--corPrimary);
+    border-radius: 8px;
+    color: var(--corFontPrimary);
+    padding-left: 5px;
+}
+
+strong {
+    color: var(--corPrimary);
+}
+
+:focus {
+    outline: none;
+    border: 1px solid var(--corPrimary);
+    box-shadow: 2px 2px 1px var(--corPrimary);
+}
+
+select {
+    width: 528px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid var(--corPrimary);
+    color: var(--corFontPrimary);
+    padding-left: 5px;
+}
+
+section {
+    gap: 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 20px 64px 20px 64px;
+    gap: 48px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #acacac;
+    margin: 50px;
+}
+
+.cabecalho__texto-instrutivo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cabecalho__texto-instrutivo__titulo {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    width: 528px;
+    height: 30px;
+    color: #292524;
+}
+
+.cabecalho__texto-instrutivo__texto {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    width: 528px;
+    height: 48px;
+    color: var(--corFontPrimary);
+}
+
+.formulario-informacoes {
+    width: 528px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.informacoes-participante {
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes-participante__titulo {
+    font-weight: 600;
+    width: 528px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #292524;
+}
+
+.campo-enviar-arquivo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    border-style: dashed;
+    border-color: #D6D3D1;
+    border-radius: 12px;
+    border-width: 3px;
+    padding: 25px 0;
+}
+
+.campo-enviar-arquivo img {
+    width: 48px;
+    height: 48px;
+}
+
+.campo-enviar-arquivo label {
+    width: 163px;
+    height: 48px;
+    size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #D6D3D1;
+}
+
+.informacoes-endereco {
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes-endereco__titulo {
+    font-weight: 600;
+    width: 528px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #292524;
+}
+
+.campo-endereco {
+    display: flex;
+    width: 528px;
+    gap: 20px;
+}
+
+.campo-endereco-input__grande input {
+    display: flex;
+    width: 325px;
+}
+
+.campo-endereco-input__pequeno input {
+    display: flex;
+    width: 174px;
+}
+
+.selecionar-trilha {
+    display: flex;
+    flex-direction: column;
+}
+
+.selecionar-trilha__titulo {
+    font-weight: 600;
+    width: 528px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #292524;
+}
+
+.campo-opcoes-trilhas {
+    display: flex;
+    flex-flow: wrap;
+    gap: 16px;
+}
+
+label.trilhas-opcao {
+    width: 253px;
+    height: 117px;
+    cursor: pointer;
+
+    .card-opcao-trilha {
+        border: 1px solid #D6D3D1;
+        width: 253px;
+        height: 117px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .check-icon {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #e3e3e3;
+        border-radius: 50%;
+
+        position: relative;
+
+        top: 10px;
+        left: 10px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("Assets/Icones/check.png");
+            background-repeat: no-repeat;
+            background-size: 12px;
+            background-position: center center;
+            transform: scale(1.0);
+
+            opacity: 0;
+        }
+    }
+
+    input[type="radio"] {
+        display: none;
+
+        &:checked {
+            +.card-trilha-opcao {
+                border: 2px solid var(--corPrimary);
+
+                .check-icon {
+                    background: var(--corPrimary);
+                    border: 1px solid var(--corPrimary);
+
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.conteudo-trilhas-opcao {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.campo-termos {
+    width: 528px;
+    height: 48px;
+}
+
+.campo-termos input {
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    border: solid 1.5px #D6D3D1;
+    margin: 2.5px;
+
+    &:focus {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+.campo-termos__texto {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.campo-confirmacao__botoes {
+    display: flex;
+    width: 528px;
+    height: 64px;
+    align-items: center;
+    justify-content: end;
+    gap: 16px;
+}
+
+.campo-confirmacao__botoes button {
+    cursor: pointer;
+    border-radius: 8px;
+    border: solid 1px #FFFFFF;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.campo-confirmacao__fazer-inscricao {
+    width: 169px;
+    height: 48px;
+    background-color: var(--corPrimary);
+}
+
+.campo-confirmacao__cancelar {
+    width: 123px;
+    height: 48px;
+}
+
+.campo-confirmacao__botoes label {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 121px;
+    height: 24px;
+}
+
+.campo-confirmacao__fazer-inscricao label {
+    color: #FFFFFF;
+}
