@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="validacao.js" defer></script>
+    <link rel="stylesheet" href="./Styles/style.css">
 </head>
 
 <body>
@@ -24,7 +23,7 @@
         <form action="#" class="formulario-informacoes">
 
             <section class="informacoes-participante">
-                <h3 class="informacoes-participante__titulo">Informações do participante</h3>
+                <h3 class="titulo-secao">Informações do participante</h3>
 
                 <div class="campo-nome-completo">
                     <label for="nome-completo">Nome completo</label>
@@ -70,8 +69,8 @@
                 </div>
             </section>
 
-            <section class="informacoes-endereco">
-                <h3 class="informacoes-endereco__titulo">Endereço residencial</h3>
+            <section class="informacoes-participante">
+                <h3 class="titulo-secao">Endereço residencial</h3>
 
                 <div class="campo-cep">
                     <label for="cep">CEP</label>
@@ -179,6 +178,20 @@
                 </div>
             </section>
 
+            <section class="campo-informacoes-login informacoes-participante">
+                <h3 class="titulo-secao">Informações de Login</h3>
+
+                <div class="campo-nome-completo">
+                    <label for="usuario">Nome de Usuário</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                
+                <div class="campo-senha">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+            </section>
+
             <section class="campo-termos">
                 <div class="campo-termos__texto">
                     <input type="checkbox" id="termos" name="termos" required>
@@ -192,6 +205,9 @@
                     <button type="reset" class="campo-confirmacao__cancelar" onclick="">
                         <label for="#">Cancelar</label>
                     </button>
+                    <button type="button" class=" campo-confirmacao__salvar" onclick="validarFormulario()">
+                        <label for="#">Salvar</label>
+                    </button>
                     <button type="button" class="campo-confirmacao__fazer-inscricao" onclick="validarFormulario()">
                         <label for="#">Fazer Inscrição</label>
                     </button>
@@ -200,5 +216,6 @@
 
         </form>
     </main>
+    <script src="./Js/validacao.js" defer></script>
 </body>
 </html>
